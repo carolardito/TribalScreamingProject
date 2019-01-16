@@ -20,10 +20,16 @@ class TestTribalScreaming {
 		actualResult = ts.scream("PETER");
 		assertEquals("PETER IS AMAZING", actualResult);*/
 		String[] array = {"Peter", "Jigesha"};
-		
 		String actualResult = ts.scream(array);
-		
 		assertEquals("Peter and Jigesha are amazing", actualResult);
+		System.out.println(actualResult);
+		
+		String[] array2 = {"Peter", "Jigesha", "Marcos"};
+		actualResult = ts.scream(array2);
+		assertEquals("Peter, Jigesha and Marcos are amazing", actualResult);
+		System.out.println(actualResult);
+		
+		
 	}
 
 }
