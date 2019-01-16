@@ -13,6 +13,9 @@ class TestTribalScreaming {
 		
 		assertEquals("Peter is amazing", actualResult);
 		
+
+		actualResult = ts.scream(null);
+		assertEquals("You is amazing", actualResult);
 	}
 
 }
