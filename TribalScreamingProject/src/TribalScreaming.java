@@ -17,17 +17,40 @@ public class TribalScreaming {
 		}*/
 		
 		String finalResult = " are amazing";
-		String namesResult = "";
+		String namesResult = "", result = "";
+		int posUpper = 999;
+		
 		
 		for (int i = 0; i < name.length; i++) {
-			if (namesResult.isEmpty()) {
-				namesResult = name[i];
-			}else {
-				namesResult += " and " + name[i];
+			
+			if (name[i].equals(name[i].toUpperCase())) {
+				posUpper = i;
+			}
+			
+			if (posUpper == 999 || posUpper != i) {
+				if (namesResult.isEmpty()) {
+					namesResult = name[i];
+				}
+				else if (i < name.length-1) {
+					namesResult += ", " + name[i];
+				}
+				else {
+					namesResult += " and " + name[i];
+				}
 			}
 		}
 		
-		return namesResult + finalResult;
+		if (name.length == 2 && posUpper != 999) {
+			finalResult = " is amazing";
+		}
+		
+		result = namesResult + finalResult;
+		if (posUpper != 999) {
+			
+			result = result + ". " + name[posUpper] + " ALSO!";
+		}
+		
+		return result;
 		
 		
 	}
