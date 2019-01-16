@@ -22,7 +22,11 @@ public class TribalScreaming {
 		for (int i = 0; i < name.length; i++) {
 			if (namesResult.isEmpty()) {
 				namesResult = name[i];
-			}else {
+			}
+			else if (i < name.length-1) {
+				namesResult += ", " + name[i];
+			}
+			else {
 				namesResult += " and " + name[i];
 			}
 		}
