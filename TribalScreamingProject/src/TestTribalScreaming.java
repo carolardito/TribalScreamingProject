@@ -9,7 +9,7 @@ class TestTribalScreaming {
 		
 		TribalScreaming ts = new TribalScreaming();
 		
-		String actualResult = ts.scream("Peter");
+		/*String actualResult = ts.scream("Peter");
 		
 		assertEquals("Peter is amazing", actualResult);
 		
@@ -18,7 +18,12 @@ class TestTribalScreaming {
 		assertEquals("You is amazing", actualResult);
 		
 		actualResult = ts.scream("PETER");
-		assertEquals("PETER IS AMAZING", actualResult);
+		assertEquals("PETER IS AMAZING", actualResult);*/
+		String[] array = {"Peter", "Jigesha"};
+		
+		String actualResult = ts.scream(array);
+		
+		assertEquals("Peter and Jigesha are amazing", actualResult);
 	}
 
 }
