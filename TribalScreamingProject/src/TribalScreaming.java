@@ -1,8 +1,8 @@
 
 public class TribalScreaming {
 
-	public String scream(String name) {
-		String finalResult = " is amazing";
+	public String scream(String name[]) {
+		/*String finalResult = " is amazing";
 		
 		//finalResult = name + finalResult;
 		if (name == null) {
@@ -14,9 +14,20 @@ public class TribalScreaming {
 			if (name.equals(name.toUpperCase())) {
 				finalResult = finalResult.toUpperCase();
 			}
+		}*/
+		
+		String finalResult = " are amazing";
+		String namesResult = "";
+		
+		for (int i = 0; i < name.length; i++) {
+			if (namesResult.isEmpty()) {
+				namesResult = name[i];
+			}else {
+				namesResult += " and " + name[i];
+			}
 		}
 		
-		return finalResult;
+		return namesResult + finalResult;
 		
 		
 	}
